@@ -1,0 +1,13 @@
+package classes_example;
+
+public class Killer {
+	public String target;
+	
+	public String gettarget(){
+		return target;
+	}
+
+	public void settarget(String target) {
+		this.target = target;
+	}
+}

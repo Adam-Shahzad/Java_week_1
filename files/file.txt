@@ -1,0 +1,10 @@
+people [name=vitally, age=21, job_title=Meme-lord]    
+
+people [name=david, age=22, job_title=dentist]    
+
+people [name=bekki, age=49, job_title=haid dresser]    
+
+people [name=adam, age=17, job_title=florist]    
+
+people [name=jamie, age=37, job_title=oil rig woker]    
+

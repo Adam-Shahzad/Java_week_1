@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Create {
+	
+	
+	public static void main(String[] args) {
+		
+		int counter = 0;
+		car a = new car(4, 1990, 2000, 4, 3, false, "car");
+		moterbike b = new moterbike(4, 1990, 2000, 4, true, true, "moterbike" );
+		van c = new van(4,1990,2000, 3000,true, "van" );
+		
+		ArrayList<Vehicle> Vehicle = new ArrayList();
+		Vehicle.add(a);
+		Vehicle.add(b);
+		Vehicle.add(c);
+		
+		Scanner sc=new Scanner(System.in); 
+		String search =sc.next();
+		
+		
+		if (Vehicle.toString().contains(search) == true)
+		{
+			while (counter <= Vehicle.size()-1){
+				
+				System.out.println(Vehicle.get(counter));
+				counter = counter + 1;
+			}
+		}
+			
+		
+}
+}

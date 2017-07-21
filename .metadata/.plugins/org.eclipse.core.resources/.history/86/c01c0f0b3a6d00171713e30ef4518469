@@ -1,0 +1,46 @@
+package battleships_test;
+
+import battleships.board;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class testymctest {
+	
+	@Before
+	public void b4(){
+		boolean co_ordinates[][] = new boolean[3][3];
+		fill(co_ordinates);
+		board b1 = new board(co_ordinates);
+	}
+	
+
+	@Test
+	public void test(board b1) {
+		assertEquals(b1.valid_place(1, 1), true);
+		
+	}
+	
+	@Test
+	public void test2(board b1) {
+		assertEquals(b1.valid_direction("s", 0, 1), true);
+	}
+	
+	@Test
+	public void test3(board b1){
+		b1.valid_place(1, 1);
+		assertEquals(b1.hit(1, 1), true);
+		
+	}
+	
+	public void fill(boolean co_ordinates[][]){
+		for (int x = 0; x < 3; x++) {
+			for (int y = 0; y < 3; y++) {
+				co_ordinates[x][y] = false;
+			}}
+		
+		
+	}
+
+}

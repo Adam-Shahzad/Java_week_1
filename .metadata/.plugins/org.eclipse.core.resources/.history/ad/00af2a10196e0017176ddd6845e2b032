@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Runner {
+public  static void main(String[] args){
+	Runner r = new Runner();
+	int id = 1;
+	book b1 = new book(1, "Adam Shahzad", "Kill me now", 750, false, true, "self help");
+	Magazine m1 = new Magazine(2, "David Donaghy", "Compare the Spark-it" , 22, false, 420, "lifestyle");
+	
+	ArrayList<Litrature> c = new ArrayList();
+	
+	c.add(b1);
+	c.add(m1);
+	Scanner sc = new Scanner(System.in);
+	id = sc.nextInt();
+	r.Get_item_from_id(id, c );
+	
+}
+
+public void Get_item_from_id(int id, ArrayList<Litrature> c ){
+	
+	for(int i =0; i< c.size()-1; i++){
+		
+		if(c.get(i).checkID(id)== true){
+			System.out.println(c.get(i));
+		}
+	}
+}
+}

@@ -1,0 +1,18 @@
+package classes_example;
+
+public class Clean extends Robot {
+	boolean atribute2;
+
+	public Clean(int atribute) {
+		super(atribute);
+	}
+
+	public boolean isAtribute2() {
+		return atribute2;
+	}
+
+	public void setAtribute2(boolean atribute2) {
+		this.atribute2 = atribute2;
+	}
+
+}

@@ -1,0 +1,6 @@
+package classes_example;
+
+public interface Can_bark {
+	
+	public String  bark() ;
+}

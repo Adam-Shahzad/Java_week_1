@@ -1,0 +1,8 @@
+package paint;
+
+public class Paint {
+double price;
+double volume;
+double effectivness;
+
+}

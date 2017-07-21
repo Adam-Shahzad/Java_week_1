@@ -1,0 +1,11 @@
+package paint;
+
+public class Paint {
+double price;
+double volume;
+double effectivness;
+String name;
+double total_price;
+double left_over;
+
+}

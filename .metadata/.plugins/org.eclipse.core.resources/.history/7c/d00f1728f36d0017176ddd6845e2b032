@@ -1,0 +1,9 @@
+package classes_example;
+
+public class Robot_Dog extends Animal implements Can_bark{
+
+	public Robot_Dog(int no_Of_Legs) {
+		super(no_Of_Legs);
+	}
+
+}

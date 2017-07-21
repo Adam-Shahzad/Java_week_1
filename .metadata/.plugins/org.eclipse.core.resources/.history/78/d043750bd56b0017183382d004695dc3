@@ -1,0 +1,58 @@
+package paint;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main{
+
+public static void  main(String[] args) {
+	
+	Paint[] p = new Paint[4];	
+	p[1] = new Paint();
+	p[2] = new Paint();
+	p[3] = new Paint();
+	
+	System.out.print("How Big is the room");
+	Scanner sc = new Scanner(System.in);
+	int search = sc.nextInt();
+	
+	p[1].price = 19.99;
+	p[1].volume = 20;
+	p[1].effectivness = 10;
+	p[1].name = "cheapo";
+	
+
+	p[2].price = 17.99;
+	p[2].volume = 15;
+	p[2].effectivness = 11; 
+	p[2].name = "Average"; 
+
+	p[3].price = 25.00;
+	p[3].volume = 10;
+	p[3].effectivness = 20; 
+	p[3].name = "Delux"; 
+	
+	
+	int counter = 1;
+	while (counter <=3)
+	{
+		double answer =  (p[counter].volume * p[counter].effectivness);
+		answer = search/answer;
+		
+		p[counter].total_price = (Math.ceil (answer) * p[counter].price);
+		System.out.println("£"+ Math.ceil (answer) * p[counter].price);
+		
+		answer =  Math.ceil (answer) * p[counter].volume - search;
+		
+		System.out.println(answer);
+		p[counter].left_over = answer;
+		
+		counter = counter + 1;
+	
+
+
+}
+
+
+}
+}

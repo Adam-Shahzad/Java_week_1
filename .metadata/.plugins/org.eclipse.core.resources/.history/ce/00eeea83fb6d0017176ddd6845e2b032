@@ -1,0 +1,15 @@
+package classes_example;
+
+public class Dog extends Animal implements Is_dog {
+	String breed;
+
+	public Dog(String breed) {
+		super(4);
+		this.breed = breed;
+	}
+
+	public String bark() {
+		return "woof";
+	}
+
+}

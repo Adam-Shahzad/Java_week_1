@@ -1,0 +1,14 @@
+package classes_example;
+
+public class Robot_Dog extends Robot implements Is_dog {
+
+	public Robot_Dog(int ID) {
+		super(ID);
+	}
+
+	@Override
+	public String bark() {
+		return "bzz woof";
+	}
+
+}

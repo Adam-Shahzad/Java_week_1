@@ -1,0 +1,44 @@
+package battleships;
+
+public class board {
+ boolean co_ordinates[][];
+ int max =  2;
+ int min = 0;
+ boolean valid_move;
+ 
+public board(boolean[][] co_ordinates) {
+	super();
+	this.co_ordinates = co_ordinates;
+}
+
+
+public boolean[][] getCo_ordinates() {
+	return co_ordinates;
+}
+
+public void setCo_ordinates(boolean[][] co_ordinates) {
+	this.co_ordinates = co_ordinates;
+}
+
+public void empty_Board()
+{
+	co_ordinates = null;
+}
+
+public boolean valid_place(int x, int y)
+{
+	if (0<=x && x<=2 && 0<=y && y<=2){
+		co_ordinates[x][y]=true;
+		return true;
+	}
+	else {return false;}
+}
+
+public boolean valid_direction(String direction)
+{
+	
+	return false;
+	
+}
+}
+

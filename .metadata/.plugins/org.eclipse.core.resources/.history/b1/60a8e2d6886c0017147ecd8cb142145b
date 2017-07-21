@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Factorialsd {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int scan = sc.nextInt();
+		int scan2 = scan;
+		int counter =2;
+		boolean factorial = true;
+		
+		while(scan > 1)
+		{
+			if (scan % counter == 0)
+			{
+			scan = (scan / counter);
+			counter = counter + 1;
+			}
+		
+			else 
+			{
+				factorial = false;
+				System.out.println(scan2 + " = NONE" );
+				break;			
+			}
+			
+		}
+		
+		if (factorial == true)
+		{
+			System.out.println(scan2 + " = " + (counter - 1)"!" );
+		}
+
+	}
+
+}

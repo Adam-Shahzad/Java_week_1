@@ -1,0 +1,34 @@
+
+public class van extends Vehicle {
+	int max_load;
+	boolean Van_MOT;
+
+	public van(int no_wheels, int year, int milage, int max_load, boolean Van_MOT, String ID, String type) {
+		super(no_wheels, year, milage, ID , type);
+		this.max_load = max_load;
+		this.Van_MOT = Van_MOT;
+	}
+
+	public double MOT_Price() {
+		if (Van_MOT = true) {
+			return 100;
+		} else {
+			return 0;
+		}
+	}
+
+	public double max_load_price() {
+		return max_load / 2;
+	}
+
+	public String toString() {
+
+		return ID + " - " + type;
+	}
+
+	public double total() {
+
+		double total = max_load_price() + MOT_Price() + tire_price() + milage_cat() + Year_price();
+		return total;
+	}
+}

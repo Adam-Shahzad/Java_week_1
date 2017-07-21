@@ -1,0 +1,23 @@
+
+public abstract class Vehicle {
+
+	public Vehicle(int no_wheels, int year, int milage) {
+	}
+
+	public double tire_price(int no_wheels) {
+		return no_wheels * 25;
+	}
+
+	public double milage_cat(int milage) {
+		double milage_price = 0.0;
+		if (milage < 5000)
+			milage_price = 50.0;
+		else
+			milage_price = 100.0;
+		return milage_price;
+	}
+	
+	public double Year_price(int year) {
+		return year % 1950;
+	}
+}

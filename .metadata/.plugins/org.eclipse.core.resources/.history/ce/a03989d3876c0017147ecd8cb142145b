@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Factorialsd {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int scan = sc.nextInt();
+		int counter =2;
+		
+		while(scan > 1)
+		{
+			if (scan % counter == 0)
+			{
+			scan = (scan / counter);
+			counter = counter + 1;
+			}
+		
+			else
+			{
+				System.out.println("is not factorial");
+				break;			
+			}
+			
+		}
+
+	}
+
+}

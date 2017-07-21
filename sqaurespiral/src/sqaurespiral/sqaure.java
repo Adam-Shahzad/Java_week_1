@@ -1,0 +1,69 @@
+package sqaurespiral;
+
+import java.util.Scanner;
+
+public class sqaure {
+
+	static int x=0 ,y=0,a=0,b=0;
+	
+	String disp = "";
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		int input= sc.nextInt();
+		int[][] bored = new int[input+1][input+1];
+		int counter = 0;
+	while (couter = y){	
+		for (a =0; a<input-y ;a++)
+		{
+			y++;
+			bored[a][b] = y;
+			
+		}
+		a--;
+		for (b=1; b<input-y;b++)
+		{
+			y++;
+			bored[a][b] = y;
+			
+			
+		}
+		a++;
+		b--;
+		for (a =input-y; a>=0 ;a--)
+		{
+			y++;
+			bored[a][b] = y;
+			
+			
+		}
+		b++;
+		a++;
+		
+		for (b=input-y; b>=1;b--)
+		{
+			y++;
+			bored[a][b] = y;
+			
+		}
+		counter = counter + 1;
+	}
+		
+		for(int i = 0; i < input; i++)
+		   {
+		      for(int j = 0; j < input; j++)
+		      {
+		         System.out.print( bored[j][i]);
+		      }
+		      System.out.print("\n");
+		   }
+		
+	}
+}
+
+
+
+
+

@@ -1,0 +1,26 @@
+package classes_example;
+import java.util.Scanner;
+
+public class Errors {
+public static void main(String[] args){
+Errors e = new Errors();
+	e.method1();
+}
+
+
+public void method1(){
+try{
+	method2();
+}
+catch (ArithmeticException ae){
+	System.out.print("You can't dived by zero");
+}
+
+	
+}
+public int method2() throws ArithmeticException{
+	Scanner sc = new Scanner(System.in);
+	int input = sc.nextInt();
+	return 100/input;
+	}
+}

@@ -1,0 +1,19 @@
+package classes_example;
+
+public class Super_class {
+	int atribute;
+
+	public Super_class(int atribute) {
+		super();
+		this.atribute = atribute;
+	}
+
+	public int getAtribute() {
+		return atribute;
+	}
+
+	public void setAtribute(int atribute) {
+		this.atribute = atribute;
+	}
+
+}

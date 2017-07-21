@@ -1,0 +1,9 @@
+
+public abstract class Vehicle {
+ int no_wheels;
+ int year;
+ int milage;
+}
+
+
+public

@@ -1,0 +1,20 @@
+package classes_example;
+
+public class Cleaner extends Robot {
+	boolean task_completed;
+
+	public Cleaner(int atribute, boolean task_completed) {
+		super(atribute);
+		this.task_completed = task_completed;
+	}
+
+	public boolean isTask_completed() {
+		return task_completed;
+	}
+
+	public void setTask_completed(boolean task_completed) {
+		this.task_completed = task_completed;
+	}
+
+	
+}

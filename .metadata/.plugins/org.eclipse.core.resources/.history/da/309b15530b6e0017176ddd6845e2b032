@@ -1,0 +1,11 @@
+
+public class Magazine extends Litrature {
+	
+public Magazine(int id, String author, String title, int pg_number, boolean is_issued) {
+		super(id, author, title, pg_number, is_issued);
+		
+	}
+int issue_no;
+String catogory;
+
+}

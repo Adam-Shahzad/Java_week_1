@@ -1,0 +1,75 @@
+package paint;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Paint[] p = new Paint[4];
+		p[1] = new Paint();
+		p[2] = new Paint();
+		p[3] = new Paint();
+
+		System.out.print("How Big is the room");
+		Scanner sc = new Scanner(System.in);
+		int search = sc.nextInt();
+
+		p[1].price = 19.99;
+		p[1].volume = 20;
+		p[1].effectivness = 10;
+		p[1].name = "cheapo";
+
+		p[2].price = 17.99;
+		p[2].volume = 15;
+		p[2].effectivness = 11;
+		p[2].name = "Average";
+
+		p[3].price = 25.00;
+		p[3].volume = 10;
+		p[3].effectivness = 20;
+		p[3].name = "Delux";
+
+		int counter = 1;
+		while (counter <= 3) {
+			double Paint_needed = (search / (p[counter].effectivness * p[counter].volume));
+			double total_tins = Math.ceil(Paint_needed);
+
+			p[counter].total_price = total_tins * p[counter].price;
+			System.out.println("£" + total_tins * p[counter].price);
+
+			p[counter].left_over = (total_tins - Paint_needed) * p[counter].volume;
+			System.out.println((total_tins - Paint_needed) * p[counter].volume + " litres");
+
+			counter = counter + 1;
+		}
+
+		counter = 1;
+		double temp = 0;
+		String ntemp = "";
+		double temp2 = 0;
+		String ntemp2 = "";
+
+		while (counter <= 2) {
+			if (p[counter].total_price < p[counter + 1].total_price) {
+				temp = p[counter].total_price;
+				ntemp = p[counter].name;
+			} else
+				temp = p[counter + 1].total_price;
+				ntemp = p[counter+1].name;
+
+			if (p[counter].left_over < p[counter + 1].left_over) {
+				temp2 = p[counter].left_over;
+				ntemp2 = p[counter].name;
+			} else
+				temp2 = p[counter + 1].left_over;
+				ntemp2 = p[counter + 1].name;
+			counter = counter + 1;
+		}
+		System.out.println("");
+		System.out.println( ntemp +" is the cheapest at £"+temp);
+		System.out.println(ntemp2 + " will have the least left over at "+ temp2 + "litres");
+	}
+	
+}

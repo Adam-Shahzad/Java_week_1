@@ -1,0 +1,17 @@
+package classes_example;
+
+public class Killer extends Robot {
+	public String target;
+
+	public Killer(int atribute) {
+		super(atribute);
+	}
+
+	public String gettarget() {
+		return target ;
+	}
+
+	public void settarget(String target) {
+		this.target = target;
+	}
+}

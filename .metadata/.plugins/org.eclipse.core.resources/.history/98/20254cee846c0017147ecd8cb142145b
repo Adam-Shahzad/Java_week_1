@@ -1,0 +1,52 @@
+package files;
+
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.util.ArrayList;
+
+public class main2 {
+	public static void main(String[] args) {
+
+		people a = new people("vitally", 21, "Meme-lord");
+		people b = new people("david", 22, "dentist");
+		people c = new people("bekki", 49, "haid dresser");
+		people d = new people("adam", 17, "florist");
+		people e = new people("jamie", 37, "oil rig woker");
+
+		ArrayList<people> peeps = new ArrayList<people>();
+		peeps.add(a);
+		peeps.add(b);
+		peeps.add(c);
+		peeps.add(d);
+		peeps.add(e);
+		
+		try {
+			write_method(peeps);
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+	}
+
+	public static void write_method(ArrayList<people> peeps) throws UnsupportedEncodingException, FileNotFoundException, IOException {
+		
+		try (Writer writer = new BufferedWriter(
+				new OutputStreamWriter(new FileOutputStream("filename.txt"), "utf-8"))) {
+			for (people p : peeps)
+				writer.append(p.toString());
+				
+		}
+	}
+}

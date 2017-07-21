@@ -1,0 +1,12 @@
+package battleships;
+
+public class mainBattle {
+
+	public static void main(String[] args) {
+		board b1 = new board(null, 0, 0);
+		board b2 = new board(null, 0, 0);
+		
+
+	}
+
+}

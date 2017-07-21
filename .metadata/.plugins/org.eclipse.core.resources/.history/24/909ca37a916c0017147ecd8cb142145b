@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class GuessingGame {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Please enter an integer between 1 and 100: ");
+		Scanner sc = new Scanner(System.in);
+		int number = Integer.parseInt(sc.nextLine());
+		
+		
+		
+		int numbr = 50;
+		
+		System.out.println("My guess is: " + numbr);
+		
+		System.out.println("Is your number higher or lower? (H/L)");
+		
+		
+		String HL = sc.nextLine();
+		
+		
+		while (number != numbr)
+		{		
+		
+		if (HL.equals("H"))
+		{
+			numbr = (int) (numbr * 1.5);
+			System.out.println(numbr);
+		}
+		else if (HL.equals("L"))
+		{
+			numbr = (int) (numbr * 0.5);
+			System.out.println(numbr);
+			
+		}
+		System.out.println("Is your number higher or lower? (H/L)");
+		
+		
+		HL = sc.nextLine();
+		}
+	}
+}

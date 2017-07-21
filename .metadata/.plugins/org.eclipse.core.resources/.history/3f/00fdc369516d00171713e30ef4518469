@@ -1,0 +1,89 @@
+package battleships;
+
+public class board {
+ boolean co_ordinates[][];
+ int max =  2;
+ int min = 0;
+ boolean valid_move;
+ 
+public board(boolean[][] co_ordinates) {
+this.co_ordinates = co_ordinates;
+}
+
+
+public boolean[][] getCo_ordinates() {
+	return co_ordinates;
+}
+
+public void setCo_ordinates(boolean[][] co_ordinates) {
+	this.co_ordinates = co_ordinates;
+}
+
+public void empty_Board()
+{
+	co_ordinates = null;
+}
+
+public boolean valid_place(int y, int x)
+{
+	if (min<=x && x<=max && min<=y && y<=max){
+		co_ordinates[x][y]=true;
+		return true;
+	}
+	else {return false;}
+}
+
+public boolean valid_direction(String direction, int y, int x)
+{
+	switch(direction){
+	case "n":
+		if(y+1<=max){co_ordinates[x][y+1]=true; return true;}
+		else return false;
+	case "s":
+		if(y-1>=min){co_ordinates[x][y-1]=true; return true;}
+		else return false;
+	case "e":
+		if(x+1<=max){co_ordinates[x+1][y]=true; return true;}
+	case "w":
+		if(x-1>=min){co_ordinates[x-1][y]=true; return true;}
+		else return false;
+	default:
+		return false;
+}	
+}
+public boolean hit(int y, int x)
+{
+	if (co_ordinates[y][x]==true){co_ordinates[y][x]=false;return true;}
+	else return false;
+	
+	
+}
+
+public boolean isempty()
+{
+	boolean isEmpty = true; 
+	for (int x = 0; x < 3; x++) {
+		for (int y = 0; y < 3; y++) {
+			if (co_ordinates[x][y] == true){ isEmpty =false; };
+			}}
+	return isEmpty;
+
+}
+public String disp_board()
+{
+	String disp = "";
+	for (int x = 0; x < 3; x++) {
+		for (int y = 0; y < 3; y++) {
+			if (co_ordinates[x][y] == true){ disp = disp + "[x]"; }
+			else disp = disp + "[ ]";
+			}
+		disp = disp + "\n";
+		}
+	return disp;
+}
+
+}
+
+
+
+

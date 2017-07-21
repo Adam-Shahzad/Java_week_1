@@ -1,0 +1,14 @@
+package classes_example;
+
+public class Runner_class {
+
+	public static void main(String[] args) {
+	
+	Dog david_dog  = new Dog("Bolognese");
+	System.out.println(david_dog.bark(david_dog.getBreed()));
+	Robot_Dog Adam_dog = new Robot_Dog(420);
+	System.out.println(Adam_dog.bark(Adam_dog.getID()));
+	
+	}
+
+}
