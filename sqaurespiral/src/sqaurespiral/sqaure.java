@@ -15,7 +15,7 @@ public class sqaure {
 		int input= sc.nextInt();
 		int[][] bored = new int[input+1][input+1];
 		int counter = 0;
-	while (couter = y){	
+	while (counter == y){	
 		for (a =0; a<input-y ;a++)
 		{
 			y++;
