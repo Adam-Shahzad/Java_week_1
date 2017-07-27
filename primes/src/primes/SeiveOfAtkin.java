@@ -6,6 +6,7 @@ public class SeiveOfAtkin {
 		int limit = 2000000000;
 		long counter = 3;
 		boolean[] seive = new boolean[limit];
+		
 
 		for (int i = 0; i < seive.length; i++) {
 			seive[i] = false;

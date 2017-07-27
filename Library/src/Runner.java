@@ -286,10 +286,7 @@ public class Runner {
 	}
 
 	public void Save_details(ArrayList<Litrature> c, Runner r) {
-		r.update(c);
-		System.out.println("Save Details y/n");
-		Scanner sc = new Scanner(System.in);
-		String choice = sc.next();
+		System.out.println("Save successful");
 		try {
 			PrintStream fileStream = new PrintStream(new File("savefile.txt"));
 			for (int i = 0; i < c.size(); i++) {
